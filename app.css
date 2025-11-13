@@ -258,3 +258,35 @@ body::before {
     font-size: 0.9rem;
   }
 }
+
+/* ===============================
+   Why Hire Section
+================================*/
+.why-hire-section {
+  margin-top: 35px;
+  background: #FAFAFA;
+  padding: 22px 28px;
+  border-radius: 12px;
+  border-left: 5px solid #F6B756;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.why-hire-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(246, 183, 86, 0.15);
+}
+
+.why-hire-section .section-title {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #2C2C2C;
+  border-bottom: 3px solid #F6B756;
+}
+
+.why-hire-text {
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: #333;
+  text-align: justify;
+}
