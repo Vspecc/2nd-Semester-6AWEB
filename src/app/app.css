@@ -1,0 +1,180 @@
+Global Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cv-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 60px;
+  /* Font Change: Use a professional sans-serif (Roboto) with serifs for headings if possible */
+  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  /* Color Change: Darker, more sophisticated text color (Charcoal) */
+  color: #2c3e50;
+  line-height: 1.65; /* Slightly increased line height for better readability */
+}
+
+/* Header Styles */
+.cv-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.name {
+  font-size: 3rem; /* Slightly larger */
+  font-weight: 900; /* Bolder name */
+  letter-spacing: 4px; /* Increased letter spacing for impact */
+  margin-bottom: 10px;
+  /* Font Change: Use a classic, professional font (like Merriweather, if available) for main heading */
+  font-family: 'Merriweather', 'Georgia', serif;
+  color: #2c3e50; /* Using the Charcoal color */
+  text-transform: uppercase;
+}
+
+.contact-info {
+  font-size: 0.9rem; /* Slightly smaller for detail */
+  color: #7f8c8d; /* Color Change: Slate Gray for secondary info */
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px; /* Increased gap for better spacing */
+}
+
+.contact-item {
+  display: inline-block;
+}
+
+.contact-item strong {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.contact-item a {
+  /* Color Change: Sophisticated link color (Deep Blue) */
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  /* Color Change: Slightly darker link color on hover */
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+.separator {
+  color: #bdc3c7; /* Lighter separator */
+  margin: 0 5px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px; /* Thinner divider */
+  /* Color Change: Use a subtle gradient with the main color */
+  background: linear-gradient(to right, transparent, #2c3e50, transparent);
+  margin-top: 15px;
+}
+
+/* Content Styles */
+.cv-content {
+  margin-top: 30px;
+}
+
+.profile-section,
+.skills-section,
+.technical-skills {
+  margin-bottom: 35px;
+}
+
+.section-title {
+  font-size: 1.5rem; /* Slightly larger */
+  font-weight: 700;
+  letter-spacing: 1.5px; /* Reduced letter spacing for better reading in titles */
+  /* Font Change: Use the heading font */
+  font-family: 'Merriweather', 'Georgia', serif;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  /* Border Change: Use the accent color for the border */
+  border-bottom: 2px solid #3498db;
+  text-transform: uppercase;
+}
+
+/* Profile Section */
+.profile-text {
+  font-size: 1rem;
+  color: #444; /* Slightly darker body text for better contrast */
+  text-align: left; /* Aligned left for easier reading */
+  line-height: 1.7; /* Adjusted line height */
+}
+
+/* Skills Section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.skills-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills-list li {
+  position: relative;
+  padding-left: 20px; /* Reduced padding */
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.skills-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0; /* Aligned to the left */
+  color: #3498db; /* Color Change: Use accent color for bullet points */
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Technical Skills Section */
+.tech-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Reduced gap */
+  margin-top: 15px;
+}
+
+.tech-category {
+  background-color: #ecf0f1; /* Color Change: Lighter background for the category box */
+  padding: 15px 20px;
+  border-radius: 4px;
+  /* Border Change: Use the accent color for the left border */
+  border-left: 5px solid #3498db;
+}
+
+.category-title {
+  font-size: 1.05rem;
+  font-weight: 700; /* Bolder category title */
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.tech-items {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+

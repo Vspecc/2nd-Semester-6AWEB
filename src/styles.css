@@ -1,0 +1,238 @@
+/* -----------------------------------------------------
+   COLOR PALETTE (Primary + Secondary)
+----------------------------------------------------- */
+:root {
+  --primary: #00A7A7;  /* Teal */
+  --secondary: #FOE9CC; /* Soft Cream */
+  --accent: #00A7A7;
+  --text-dark: #2C3E50;
+  --text-light: #444;
+  --bg-light: #F5F7FA;
+  --card-bg: #FFFFFF;
+}
+
+/* -----------------------------------------------------
+   GLOBAL FONT
+----------------------------------------------------- */
+body {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* -----------------------------------------------------
+   HEADER
+----------------------------------------------------- */
+.cv-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+  font-family: 'Merriweather', Georgia, serif;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+
+.contact-info {
+  font-size: 0.95rem;
+  color: #7f8c8d;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.contact-item strong {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.contact-item a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.separator {
+  color: #bdc3c7;
+  margin: 0 6px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--text-dark), transparent);
+  margin-top: 18px;
+  border-radius: 1px;
+}
+
+.profile-text {
+  font-size: 1rem;
+  color: var(--text-light);
+  text-align: left;
+  line-height: 1.75;
+  margin-top: 15px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* -----------------------------------------------------
+   SKILLS SECTION
+----------------------------------------------------- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 35px;
+  margin-top: 25px;
+  background-color: var(--bg-light);
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.skills-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.skills-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 1.2rem;
+  top: 0;
+}
+
+.skills-list li:hover {
+  color: var(--primary);
+}
+
+/* -----------------------------------------------------
+   FOOTER / TECHNICAL SKILLS
+----------------------------------------------------- */
+.tech-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.tech-category {
+  background-color: var(--card-bg);
+  padding: 18px 22px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid var(--primary);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tech-category:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
+}
+
+.category-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.tech-items {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.55;
+}
+
+.profile-text-footer {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.75;
+  margin-top: 12px;
+  padding: 15px 5px;
+  border-left: 4px solid var(--secondary);
+  background: linear-gradient(
+    to right,
+    rgba(0, 167, 167, 0.05),
+    rgba(0, 167, 167, 0)
+  );
+  border-radius: 4px;
+}
+
+/* -----------------------------------------------------
+   RESPONSIVE DESIGN
+----------------------------------------------------- */
+@media (max-width: 768px) {
+  .name {
+    font-size: 2.2rem;
+  }
+
+  .contact-info {
+    font-size: 0.9rem;
+    gap: 12px;
+  }
+
+  .profile-text,
+  .profile-text-footer {
+    font-size: 0.95rem;
+  }
+
+  .skills-grid {
+    gap: 25px;
+    padding: 15px 20px;
+  }
+
+  .skills-list li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    padding: 10px 15px;
+  }
+
+  .skills-list li {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,74 @@
+/* -----------------------------------------------------
+   COLOR PALETTE (Primary + Secondary)
+----------------------------------------------------- */
+:root {
+  --primary: #2A66FF;
+  --secondary: #6C63FF;
+  --text-dark: #2C3E50;
+  --text-light: #444;
+  --bg-light: #F5F7FA;
+  --card-bg: #FFFFFF;
+}
+
+/* -----------------------------------------------------
+   TECHNICAL SKILLS SECTION
+----------------------------------------------------- */
+.tech-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.tech-category {
+  background-color: var(--card-bg);
+  padding: 18px 22px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+
+  /* Use the primary color for the left border accent */
+  border-left: 5px solid var(--primary);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Subtle hover lift */
+.tech-category:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
+}
+
+/* -----------------------------------------------------
+   TITLES & TEXT
+----------------------------------------------------- */
+.category-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.tech-items {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.55;
+}
+
+/* -----------------------------------------------------
+   PROFESSIONAL VALUE STATEMENT
+----------------------------------------------------- */
+.profile-text {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.75;
+  margin-top: 12px;
+  padding: 15px 5px;
+  border-left: 4px solid var(--secondary);
+  background: linear-gradient(
+    to right,
+    rgba(108, 99, 255, 0.05),
+    rgba(108, 99, 255, 0)
+  );
+  border-radius: 4px;
+}

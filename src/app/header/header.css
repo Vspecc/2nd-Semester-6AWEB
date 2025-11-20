@@ -1,0 +1,119 @@
+/* -----------------------------------------------------
+   COLOR PALETTE
+----------------------------------------------------- */
+:root {
+  --primary: #1E3A8A;
+  --secondary: #6366F1;
+  --text-dark: #2C3E50;
+  --text-light: #444;
+  --bg-light: #F5F7FA;
+}
+
+/* -----------------------------------------------------
+   HEADER CONTAINER
+----------------------------------------------------- */
+.cv-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* -----------------------------------------------------
+   NAME / MAIN HEADING
+----------------------------------------------------- */
+.name {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+  font-family: 'Merriweather', Georgia, serif;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+
+/* -----------------------------------------------------
+   CONTACT INFO
+----------------------------------------------------- */
+.contact-info {
+  font-size: 0.95rem;
+  color: #7f8c8d;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.contact-item {
+  display: inline-block;
+}
+
+.contact-item strong {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.contact-item a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.separator {
+  color: #bdc3c7;
+  margin: 0 6px;
+}
+
+/* -----------------------------------------------------
+   DIVIDER / SEPARATOR LINE
+----------------------------------------------------- */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--text-dark), transparent);
+  margin-top: 18px;
+  border-radius: 1px;
+}
+
+/* -----------------------------------------------------
+   PROFILE TEXT / INTRO
+----------------------------------------------------- */
+.profile-text {
+  font-size: 1rem;
+  color: var(--text-light);
+  text-align: left;
+  line-height: 1.75;
+  margin-top: 15px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* -----------------------------------------------------
+   RESPONSIVE DESIGN
+----------------------------------------------------- */
+@media (max-width: 768px) {
+  .name {
+    font-size: 2.2rem;
+  }
+
+  .contact-info {
+    font-size: 0.9rem;
+    gap: 12px;
+  }
+
+  .profile-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .name {
+    font-size: 1.8rem;
+  }
+}
