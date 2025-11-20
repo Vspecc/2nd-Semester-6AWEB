@@ -1,16 +1,17 @@
-
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { Header } from "./header/header";
 import { Skills } from "./skills/skills";
 import { Footer } from "./footer/footer";
-
+import { CommonModule } from '@angular/common';
+import { DataBindingDemoComponent } from './data-binding-demo/data-binding-demo';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Skills, Footer],
+  // Flag as standalone because main.ts uses bootstrapApplication
+  standalone: true,
+  // All dependencies are correctly listed here
+  imports: [Header, Skills, Footer, DataBindingDemoComponent, FormsModule, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('my-first-app');
-}
+export class AppComponent { }
